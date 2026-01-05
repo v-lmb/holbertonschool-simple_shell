@@ -11,7 +11,6 @@
 void execute_command(char **args, char **av, char **environ)
 {
 	pid_t child_pid;
-	char *argv[2];
 
 	child_pid = fork();
 		if (child_pid == -1)

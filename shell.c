@@ -50,7 +50,8 @@ int main(int ac, char **av, char **environ)
 			continue;
 		}
 
-		execute_command(input, av, environ);
+		execute_command(args, av, environ);
+		free(args);
 	}
 
 	free(input);

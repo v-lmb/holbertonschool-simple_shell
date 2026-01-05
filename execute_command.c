@@ -2,13 +2,13 @@
 
 /**
  * execute_command - commande in child process
- * @input: command
+ * @args: command
  * @av: argument
  * @environ: environnement
  * Return: void
  */
 
-void execute_command(char *input, char **av, char **environ)
+void execute_command(char **args, char **av, char **environ)
 {
 	pid_t child_pid;
 	char *argv[2];
@@ -22,13 +22,10 @@ void execute_command(char *input, char **av, char **environ)
 
 		if (child_pid == 0)
 		{
-			argv[0] = input;
-			argv[1] = NULL;
 
-			if (execve(input, argv, environ) == -1)
+			if (execve(args[0], args, environ) == -1)
 			{
 				fprintf(stderr, "%s: No such file or directory\n", av[0]);
-				free(input);
 				exit(127);
 			}
 		}

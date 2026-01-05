@@ -13,5 +13,6 @@
 
 void execute_command(char **args, char **av, char **environ);
 char **split(char *input);
+char *get_path(char **envp);
 
 #endif

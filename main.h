@@ -11,7 +11,7 @@
 #include <sys/wait.h>
 #include <signal.h>
 
-void execute_command(char *input, char **av, char **environ);
+void execute_command(char **args, char **av, char **environ);
 char **split(char *input);
 
 #endif

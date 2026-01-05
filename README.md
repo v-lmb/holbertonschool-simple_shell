@@ -23,7 +23,16 @@
 ---
 
 ## Project Structure
-
+```
+holberton-simple_shell/
+│
+├── AUTHORS
+├── README.MD
+├── execute_command.c
+├── main.h
+├── shell.c
+└── split.c
+```
 
 ---
 

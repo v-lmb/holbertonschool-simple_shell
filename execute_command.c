@@ -14,8 +14,9 @@ void execute_command(char **args, char **av, char **environ)
 	char *command_path;
 
 	command_path = find_command_in_path(args[0], environ);
-	if (!command_path)
+	if (command_path == NULL)
 	{
+		fprintf(stderr, "%s: %s: not found\n", av[0], args[0]);
 		return;
 	}
 
@@ -31,7 +32,7 @@ void execute_command(char **args, char **av, char **environ)
 	{
 		if (execve(command_path, args, environ) == -1)
 		{
-			fprintf(stderr, "%s: No such file or directory\n", command_path);
+			fprintf(stderr, "%s: %s: not found\n", av[0], args[0]);
 			free(command_path);
 			exit(127);
 		}

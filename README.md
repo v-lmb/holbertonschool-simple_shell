@@ -2,18 +2,19 @@
 
 # simple_shell
 
-## Overview
-
-
----
-
 ## Table of Contents
-
-
----
-
-## Features
-
+- [General Behavior](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#general-behavior)
+- [Project Structure](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#project-structure)
+- [Flowchart](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#flowchart)
+- [Prerequisites](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#prerequisites)
+- [Installation & Execution](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#installation--execution)
+- [Compilation](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#compilation)
+- [Usage](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#usage)
+- [Technologies used](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#technologies-used)
+- [Authors](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#authors)
+- [Specials thanks](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#specials-thanks-to)
+- [Version History](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#version-history)
+- [Licence](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#license)
 
 ---
 
@@ -28,7 +29,11 @@ holberton-simple_shell/
 │
 ├── AUTHORS
 ├── README.MD
+├── build_path.c
 ├── execute_command.c
+├── find_command_in_path.c
+├── get_path.c
+├── hsh
 ├── main.h
 ├── shell.c
 └── split.c
@@ -49,7 +54,7 @@ holberton-simple_shell/
 
 ---
 
-## Installation
+## Installation & Execution
 
 1. Open your terminal
 2. Navigate to the desired directory
@@ -63,6 +68,11 @@ git clone https://github.com/v-lmb/holbertonschool-simple_shell.git
 
 ```bash
 cd holbertonschool-simple_shell
+```
+
+5. Run the program:
+```bash
+./hsh
 ```
 
 ---
@@ -121,6 +131,13 @@ hsh main.c shell.c
 
 * **[Véronique Beauvais](https://github.com/Veroniquebvs)**
 * **[Virginie Lombarte](https://github.com/v-lmb)**
+
+---
+
+## Specials thanks to
+
+* **Véronique BEAUVAIS a fabulous team mate**
+* **Sofian a very patient and helpful SWE**
 
 ---
 

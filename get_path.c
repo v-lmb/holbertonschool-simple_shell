@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
-* get_path - cherche PATH
-*
-* @envp: environnement
-* Return: valeur de PATH
-*/
+ * get_path - cherche PATH
+ * @envp: environnement
+ * Return: valeur de PATH
+ */
 
 char *get_path(char **envp)
 {

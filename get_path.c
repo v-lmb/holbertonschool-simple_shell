@@ -2,10 +2,6 @@
 
 /**
 * get_path - cherche PATH
-#include <main.h>
-
-/**
-* get_path - cherche PATH
 *
 * @envp: environnement
 * Return: valeur de PATH

@@ -1,3 +1,7 @@
+#include "main.h"
+
+/**
+* get_path - cherche PATH
 #include <main.h>
 
 /**
@@ -26,5 +30,6 @@ char *get_path(char **envp)
 	}
 
 	if (envp[i] == NULL)
+		return (NULL);
 	return (NULL);
 }

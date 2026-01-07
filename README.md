@@ -3,7 +3,7 @@
 # simple_shell
 
 ## Table of Contents
-- [General Behavior](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#general-behavior)
+- [About](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#about)
 - [Project Structure](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#project-structure)
 - [Flowchart](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#flowchart)
 - [Prerequisites](https://github.com/v-lmb/holbertonschool-simple_shell/edit/dev/README.md#prerequisites)
@@ -246,8 +246,48 @@ hsh main.c shell.c
 
 ---
 
+### Exemples
+
+```bash
+simple@Shell:~/Documents/Holberton/holbertonschool-simple_shell$ ./hsh
+$ ls
+AUTHORS  build_path.c  execute_command.c  find_command_in_path.c  get_path.c  hsh  main.h  README.md  shell.c  split.c
+$ pwd
+/home/simple/Documents/Holberton/holbertonschool-simple_shell
+$ ls -a
+.  ..  AUTHORS  build_path.c  execute_command.c  find_command_in_path.c  get_path.c  .git  hsh  main.h  README.md  shell.c  split.c
+
+```
+
+```bash
+simple@Shell:~/Documents/Holberton/holbertonschool-simple_shell$ echo "ls" | ./hsh
+AUTHORS  build_path.c  execute_command.c  find_command_in_path.c  get_path.c  hsh  main.h  README.md  shell.c  split.c
+simple@Shell:~/Documents/Holberton/holbertonschool-simple_shell$ echo "pwd" | ./hsh
+/home/simple/Documents/Holberton/holbertonschool-simple_shell
+simple@Shell:~/Documents/Holberton/holbertonschool-simple_shell$ echo "ls -la" | ./hsh
+total 68
+drwxrwxr-x  3 simple simple  4096 janv.  7 14:35 .
+drwxrwxr-x 10 simple simple  4096 déc.  22 14:26 ..
+-rw-rw-r--  1 simple simple   125 déc.  19 13:57 AUTHORS
+-rw-rw-r--  1 simple simple   573 janv.  5 18:42 build_path.c
+-rw-rw-r--  1 simple simple   743 janv.  6 15:51 execute_command.c
+-rw-rw-r--  1 simple simple   823 janv.  6 14:49 find_command_in_path.c
+-rw-rw-r--  1 simple simple   407 janv.  6 15:51 get_path.c
+drwxrwxr-x  8 simple simple  4096 janv.  6 22:12 .git
+-rwxrwxr-x  1 simple simple 17200 janv.  7 14:35 hsh
+-rw-rw-r--  1 simple simple   449 janv.  6 14:28 main.h
+-rw-rw-r--  1 simple simple  1902 janv.  6 15:50 README.md
+-rw-rw-r--  1 simple simple   805 janv.  6 15:05 shell.c
+-rw-rw-r--  1 simple simple   401 janv.  4 21:41 split.c
+```
+
+---
+
 ## Documentation
+
 The complete man page can be found in the file:
+
+[man_1_simple_shell](https://github.com/v-lmb/holbertonschool-simple_shell/blob/89b3493595b0a2a06ee9ebff60f554c5ee7bd024/man_1_simple_shell)
 
 ---
 

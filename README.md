@@ -246,7 +246,7 @@ hsh main.c shell.c
 
 ---
 
-### Exemples
+### Exemples in interactive mode
 
 ```bash
 simple@Shell:~/Documents/Holberton/holbertonschool-simple_shell$ ./hsh
@@ -258,6 +258,9 @@ $ ls -a
 .  ..  AUTHORS  build_path.c  execute_command.c  find_command_in_path.c  get_path.c  .git  hsh  main.h  README.md  shell.c  split.c
 
 ```
+
+
+### Exemples in non-interactive mode
 
 ```bash
 simple@Shell:~/Documents/Holberton/holbertonschool-simple_shell$ echo "ls" | ./hsh
@@ -301,6 +304,9 @@ The complete man page can be found in the file:
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" alt="GitHub" />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40" alt="VS Code" />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" height="40" alt="windows8 logo"  />
+  <img width="12" />
 </div>
 
 ---

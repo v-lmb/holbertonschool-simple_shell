@@ -59,6 +59,78 @@ holberton-simple_shell/
 ## Flowchart
 
 
+```mermaid
+flowchart TD
+  Start([Start shell])
+  CheckTTY{Input is tty}
+  Prompt[Print prompt]
+  Read[Read line]
+  EOF{End of file or error}
+  Trim[Remove trailing newline]
+  Empty{Line empty}
+  Tokenize[Split line into args]
+  NoArgs{Args NULL or empty}
+  FindCmd[Find command path]
+  AccessDirect{Command executable directly}
+  GetPathNode[Get PATH value]
+  PathFound{PATH found}
+  IterDirs[Select next PATH directory]
+  BuildPathNode[Build directory and command]
+  CheckExec{Built path executable}
+  MoreDirs{More directories to check}
+  CmdResolved{Command path resolved}
+  Fork[Create child process]
+  ForkFail{Fork failed}
+  Child[Child process]
+  Parent[Parent process]
+  Exec[Call execve]
+  ExecErr{execve failed}
+  Wait[Wait for child]
+  Exit([Exit shell])
+
+  Start --> CheckTTY
+  CheckTTY -- Yes --> Prompt
+  CheckTTY -- No --> Read
+  Prompt --> Read
+  Read --> EOF
+  EOF -- Yes --> Exit
+  EOF -- No --> Trim
+  Trim --> Empty
+  Empty -- Yes --> CheckTTY
+  Empty -- No --> Tokenize
+  Tokenize --> NoArgs
+  NoArgs -- Yes --> CheckTTY
+  NoArgs -- No --> FindCmd
+
+  FindCmd --> AccessDirect
+  AccessDirect -- Yes --> CmdResolved
+  AccessDirect -- No --> GetPathNode
+  GetPathNode --> PathFound
+  PathFound -- No --> CmdResolved
+  PathFound -- Yes --> IterDirs
+  IterDirs --> BuildPathNode
+  BuildPathNode --> CheckExec
+  CheckExec -- Yes --> CmdResolved
+  CheckExec -- No --> MoreDirs
+  MoreDirs -- Yes --> IterDirs
+  MoreDirs -- No --> CmdResolved
+
+  CmdResolved -- No --> CheckTTY
+  CmdResolved -- Yes --> Fork
+
+  Fork --> ForkFail
+  ForkFail -- Yes --> CheckTTY
+  ForkFail -- No --> Child
+  Child --> Exec
+  Exec --> ExecErr
+  ExecErr -- Yes --> Exit
+  ExecErr -- No --> Exit
+
+  Fork --> Parent
+  Parent --> Wait
+  Wait --> CheckTTY
+```
+
 ---
 
 ## Prerequisites

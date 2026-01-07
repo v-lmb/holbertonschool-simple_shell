@@ -18,8 +18,23 @@
 
 ---
 
-## General Behavior
+## About
 
+
+### Files
+
+| File | Description |
+| --- | --- |
+| AUTHORS | List of contributors |
+| README.md | This file |
+| build_path.c | Building full path |
+| execute_command.c | Command execution |
+| find_command_in_path.c | Searching the PATH |
+| get_path.c | Extrating the Path variable |
+| hsh | Executable |
+| main.h | Main header |
+| shell.c | Main function and shell loop |
+| split.c | Parsing arguments |
 
 ---
 
@@ -109,7 +124,7 @@ hsh main.c shell.c
 ---
 
 ## Documentation
-
+The complete man page can be found in the file:
 
 ---
 

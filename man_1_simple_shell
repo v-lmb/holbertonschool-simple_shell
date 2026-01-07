@@ -1,14 +1,13 @@
-.TH HSH 1 "01-08-2026" "Simple Shell" "User Commands"
+.TH HSH 1 "01-08-2026" "0.2" "Simple Shell" "User Commands"
 .SH NAME
 hsh \- simple command interpreter
 
 .SH SYNOPSIS
-.B hsh
-.br
 .B ./hsh
 
 .SH DESCRIPTION
-hsh is a simple command interpreter that reads commands from
+\fB hsh \fP is a basic shell version.
+It's a simple command interpreter that reads commands from
 standard input and executes them.
 .br
 In interactive mode, it displays a prompt and waits for the user
@@ -16,21 +15,55 @@ to enter commands.
 .br
 In non-interactive mode, it reads commands from standard input.
 
+.SH OPTIONS
+\fB hsh \fP doesn't take any options.
+
 .SH COMMAND EXECUTION
-hsh executes commands by searching for the executable file in the
+\fB hsh \fP executes commands by searching for the executable file in the
 directories listed in the PATH environment variable.
 .br
 If a command contains a slash (/), it is executed directly.
 
-.SH ENVIRONMENT
-hsh uses the PATH environment variable :
+.SH OPERANDS
+\fB hsh \fP supports the following operands :
 .br
-list of folders where executable programmes are located
+.SS build_path
+This function builds a PATH.
+.SS execute_command
+This function executes the command.
+.SS find_command_in_path
+This function searches the PATH.
+.SS get_path
+This function extrates the PATH variable.
+.SS split
+This function parses the arguments.
+
+.SH ENVIRONMENT
+\fB hsh \fP uses the PATH environment variable :
+.br
+list of folders where executable programmes are located.
 
 .SH EXIT STATUS
-hsh returns 0 on success.
+\fB hsh \fP returns 0 on success.
 .br
 If a command cannot be found or executed, a new prompt appears.
 
+.SH EXAMPLES
+.SS Execute the shell, execute a command and exit the shell in interactive mode :
+$ ./hsh
+.br
+$ ls
+.br
+$ ^D
+
+.SS Execute the shell and execute a command in non-intercative mode :
+$ echo "/bin/ls" | ./hsh
+.br
+$
+
+.SH BUGS
+No known bugs.
+
 .SH AUTHORS
-Veronique BEAUVAIS and Virginie LOMBARTE
+Written by Veronique BEAUVAIS and Virginie LOMBARTE
+q

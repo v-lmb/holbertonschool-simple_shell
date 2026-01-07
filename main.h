@@ -16,5 +16,6 @@ char **split(char *input);
 char *get_path(char **envp);
 char *build_path(char *directory, char *command);
 char *find_command_in_path(char *command, char **environ);
+char **split(char *input);
 
 #endif

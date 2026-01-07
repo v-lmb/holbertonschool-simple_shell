@@ -1,0 +1,36 @@
+.TH HSH 1 "01-08-2026" "Simple Shell" "User Commands"
+.SH NAME
+hsh \- simple command interpreter
+
+.SH SYNOPSIS
+.B hsh
+.br
+.B ./hsh
+
+.SH DESCRIPTION
+hsh is a simple command interpreter that reads commands from
+standard input and executes them.
+.br
+In interactive mode, it displays a prompt and waits for the user
+to enter commands.
+.br
+In non-interactive mode, it reads commands from standard input.
+
+.SH COMMAND EXECUTION
+hsh executes commands by searching for the executable file in the
+directories listed in the PATH environment variable.
+.br
+If a command contains a slash (/), it is executed directly.
+
+.SH ENVIRONMENT
+hsh uses the PATH environment variable :
+.br
+list of folders where executable programmes are located
+
+.SH EXIT STATUS
+hsh returns 0 on success.
+.br
+If a command cannot be found or executed, a new prompt appears.
+
+.SH AUTHORS
+Veronique BEAUVAIS and Virginie LOMBARTE
